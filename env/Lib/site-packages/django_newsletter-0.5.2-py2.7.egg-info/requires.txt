@@ -1,0 +1,8 @@
+django-extensions
+Django>=1.4.10
+vobject
+chardet
+surlex>=0.2.0
+sorl-thumbnail
+webtest
+django-webtest

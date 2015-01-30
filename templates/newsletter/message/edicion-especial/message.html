@@ -1,0 +1,41 @@
+{% load staticfiles %}
+{% load url from future %}{% load thumbnail %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+</head>
+
+<body>
+<table width="98%" border="0" align="center" cellpadding="0px" cellspacing="0px">
+  <tr>
+    <td><table width="799" height="736" border="0" align="center" cellpadding="0px" cellspacing="0px" style="box-shadow:0px 0px 10px 10px #b4b4b4; border-spacing:0px">
+      <tr>
+        <td height="169" style="border-spacing:0px; vertical-align:top"><img src={% static "img/cabezal completo.jpg" %} width="799" height="154" alt="logo buen viaje" />
+          </td>
+      </tr>
+      <tr align="center">
+        <td height="441" colspan="2" align="center" style="vertical-align:middle">
+            {% thumbnail message.articles.all.0.image "638x438" as image %}
+                <img src="{{ image.url }}" width="{{ image.width }}" height="{{ image.height }}" alt="Feliz 2015 le desea el equipo de realización de la revista Buen Viaje a Cuba" width="683" height="438" title="Feliz 2015">
+            {% endthumbnail %}
+        </td>
+      </tr>
+      <tr>
+        <td height="34" colspan="2" style="text-align: center; font-family: Helvetica; font-size: 18px; color: #1D438A; vertical-align: top"><em><strong>{{ message.articles.all.0.text }}</td>
+      </tr>
+      <tr height="1">
+        <td  colspan="2">&nbsp;</td>
+      </tr>
+      <tr height="71px">
+        <td colspan="2" style="background-color: #4382c3; vertical-align: middle; text-align: center; font-family: Helvetica; font-size: 12px; color: #FFF; font-weight: bold;" ><p>2015 © Buen Viaje a Cuba</p>
+          <p>Publicidad: <a href="mailto:publicidad@buenviajeacuba.com">publicidad@buenviajeacuba.com</a>&nbsp&nbsp Información: <a href="mailto:info@buenviajeacuba.com">info@buenviajeacuba.com</a></p></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
